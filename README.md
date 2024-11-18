@@ -163,6 +163,7 @@ El resultado seria:
 
 ![gif](./images1/video.gif)
 
+
 Subir usando github pages:
 Seguir las siguientes instrucciones:
 
