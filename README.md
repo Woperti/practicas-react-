@@ -49,6 +49,7 @@ Copia y pega este codigo, pero dale el nombre que quieras para la ruta. Ejemplo:
 la ruta. Ejemplo: <LoginPage />
 
 ```JavaScript
+import React from 'react'
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
