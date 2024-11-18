@@ -20,7 +20,7 @@ Usa en el proyecto React sin TS
 
 Crea la siguiente estructura:
 
-![estructura](./images1/estructure.png)
+![estructura](./images1/estructura.png)
 
 En la parte donde dice dependencias:
 Anade:
