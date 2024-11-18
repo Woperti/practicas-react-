@@ -99,6 +99,70 @@ export default function App() {
 }
 ```
 
+En el componente que sea la pagina de inicio, anadir el componente header para poder navegar desde ahi.
+Dentro de la carpeta components, crear la carpeta header y anadir Header.js y header.css
+
+```JavaScript
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./header.css";
+
+function Header() {
+  const location = useLocation();
+
+  return (
+    <header className="header">
+      <nav className="nav">
+        <Link
+          to="/"
+          className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+        >
+          Home
+        </Link>
+        <Link
+          to="/login"
+          className={`nav-link ${
+            location.pathname === "/login" ? "active" : ""
+          }`}
+        >
+          Login
+        </Link>
+        <Link
+          to="/signup"
+          className={`nav-link ${
+            location.pathname === "/signup" ? "active" : ""
+          }`}
+        >
+          Signup
+        </Link>
+      </nav>
+    </header>
+  );
+}
+
+export default Header
+```
+En el archivo Routings, importar el Header.js. Y hacer que se vea como:
+
+```JavaScript
+export const Routings = () => {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<RegisterPage />} />
+      </Routes>
+    </>
+  );
+}
+```
+
+El resultado seria:
+
+![gif](./images1/simulate.gif)
+
 Subir usando github pages:
 Seguir las siguientes instrucciones:
 
